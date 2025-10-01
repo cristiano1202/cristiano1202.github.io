@@ -11,10 +11,18 @@
 <body>
   <aside class="sidebar">
     <div class="sidebar_info">
-      <div class="cris"></div>
-      <h1 class="name">Cristiano</h1>
-      <p class="role">Lógistica</p>
-
+      <div class="presentation">
+        <div>
+          <div id="greeting"></div>
+            <p>
+              Meu nome é <br>
+              <span class="name">Cristiano Rodrigues</span>
+          </p> 
+        </div>
+        
+        <div class="cris"></div>
+      </div>
+      
       <nav class="snav">
         <a href="#professional_resume">Resumo profissional</a>
         <a href="#skills">Skills</a>
@@ -126,6 +134,17 @@
       <small>© 2025 Cristiano</small>
     </footer>
   </main>
+
+  <script>
+        function getGreeting() {
+            const hours = new Date().getHours();
+            if (hours >= 5 && hours < 12) return "Bom dia!";
+            if (hours >= 12 && hours < 18) return "Boa tarde!";
+            return "Boa noite!";
+        }
+
+        document.getElementById("greeting").textContent = getGreeting();
+    </script>
 
   <script src="script.js"></script>
 </body>

@@ -67,6 +67,18 @@ img {
   gap: 14px;
 }
 
+.presentation {
+  height: 140px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.presentation > div > p {
+  margin: 0;
+}
+
 .content {
   margin-left: 280px;
   padding: 36px;
@@ -89,8 +101,12 @@ img {
   background-size: cover;
 }
 
-.name { margin: 0; font-size: 1.4rem; }
-.role { margin: 0; color: var(--muted); }
+.name {
+  background: linear-gradient(to right, var(--accent), #b794ff, var(--fg));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
 
 .snav { display: flex; flex-direction: column; gap: 10px; }
 .snav a {
