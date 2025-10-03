@@ -1,3 +1,9 @@
+
+window.sr = ScrollReveal({ reset: true});
+
+sr.reveal('.block', { duration: 900, reset: true });
+
+
 (function () {
   const STORAGE_KEY = 'pref-theme';
   const root = document.documentElement;

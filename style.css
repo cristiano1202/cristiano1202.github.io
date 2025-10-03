@@ -120,6 +120,7 @@ img {
 .snav a:hover { opacity: 1; background: color-mix(in oklab, var(--accent) 12%, transparent); transition: .8s;}
 
 .btn {
+  
   padding: .6rem .9rem;
   border-radius: 10px;
   border: 1px solid var(--border);
@@ -164,6 +165,32 @@ img {
 }
 
 .card h3 { margin-top: 0; }
+
+/* ========= Rede sociais ========= */
+.social-media a {
+  width: 48px; height: 48px; /* garante hitbox igual */
+  display: inline-block;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-media a:hover,
+.social-media a:focus-visible {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklab, var(--accent) 30%, var(--border));
+  box-shadow: 0 8px 22px color-mix(in oklab, var(--accent) 16%, transparent);
+  outline: none;
+}
+
+.mail { background-image: url('./imagens/icon-mail.png'); }
+.whatsapp { background-image: url('./imagens/icon-whats.png'); }
+.linkedin { background-image: url('./imagens/icon-linkedin.png'); }
+.instagram { background-image: url('./imagens/icon-instagram.png'); }
 
 /* ========= Responsividade ========= */
 @media (max-width: 900px) {
