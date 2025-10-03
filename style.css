@@ -146,17 +146,23 @@ img {
 
 .tags li:hover { background: color-mix(in oklab, var(--accent) 10%, transparent); transition: .8s; cursor: default;}
 
+/* Cards responsivos sem rolagem lateral */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
   gap: 16px;
+  /* o min() garante que o mínimo nunca passe de 100% do container */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
 }
+
+/* Permite o conteúdo encolher dentro do grid (evita “vazar” largura) */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 16px;
   font-size: 14px;
+  min-width: 0; 
+  overflow-wrap: anywhere; /* quebra palavras grandes se precisar */
 }
 
 .card ul li {
@@ -188,9 +194,40 @@ img {
 }
 
 .mail { background-image: url('./imagens/icon-mail.png'); }
-.whatsapp { background-image: url('./imagens/icon-whats.png'); }
+.whatsapp { background-image: url('./imagens/icon-whatsapp.png'); }
 .linkedin { background-image: url('./imagens/icon-linkedin.png'); }
 .instagram { background-image: url('./imagens/icon-instagram.png'); }
+
+html[data-theme="dark"] .mail {
+  background-image: url('./imagens/icon-mail.png');
+}
+html[data-theme="light"] .mail {
+  background-image: url('./imagens/icon-mail-dark.png');
+}
+
+html[data-theme="dark"] .whatsapp {
+  background-image: url('./imagens/icon-whatsapp.png');
+}
+html[data-theme="light"] .whatsapp {
+  background-image: url('./imagens/icon-whatsapp-dark.png');
+}
+
+html[data-theme="dark"] .linkedin {
+  background-image: url('./imagens/icon-linkedin.png');
+} 
+
+html[data-theme="light"] .linkedin {
+  background-image: url('./imagens/icon-linkedin-dark.png');
+} 
+
+html[data-theme="dark"] .instagram {
+  background-image: url('./imagens/icon-instagram.png');
+} 
+
+html[data-theme="light"] .instagram {
+  background-image: url('./imagens/icon-instagram-dark.png');
+} 
+
 
 /* ========= Responsividade ========= */
 @media (max-width: 900px) {

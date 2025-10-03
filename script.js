@@ -1,7 +1,9 @@
 
 window.sr = ScrollReveal({ reset: true});
 
-sr.reveal('.block', { duration: 900, reset: true });
+sr.reveal('.block', { duration: 800, reset: true });
+
+sr.reveal('.sidebar', { duration: 800, reset: false });
 
 
 (function () {
